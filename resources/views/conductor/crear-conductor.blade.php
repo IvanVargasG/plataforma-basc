@@ -19,7 +19,7 @@
                         {!! csrf_field() !!}
                         <div class="form-row">
                           <div class="col-md-4 mb-3">
-                            <label for="validationCustom01">Documento</label>
+                            <label for="validationCustom01">Documento(s)</label>
                             <input type="text" class="form-control" name="documento" id="validationCustom01" placeholder="Documento" value="{{ old('documento') }}" required>
                             <div class="valid-feedback">
                               Looks good!
