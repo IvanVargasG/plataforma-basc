@@ -51,22 +51,22 @@
                               </div>
                             </div>
                           </div>
-                        </div>
                         <div class="form-row">
-                          <div class="col-md-6 mb-3">
+                          <div class="col-md-4 mb-3">
                             <label for="validationCustom03">direccion</label>
                             <input type="text" class="form-control" name="direccion" id="validationCustom03" placeholder="Direccion" value="{{ old('direccion') }}" required>
                             <div class="invalid-feedback">
                               Please provide a valid city.
                             </div>
                           </div>
-                          <div class="col-md-3 mb-3">
+                          <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Telefono</label>
                             <input type="text" class="form-control" name="telefono" id="validationCustom04" placeholder="Telefono" value="{{ old('telefono') }}" >
                             <div class="invalid-feedback">
                               Please provide a valid state.
                             </div>
                           </div>
+                        </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Crear Conductor</button>
                       </form>
