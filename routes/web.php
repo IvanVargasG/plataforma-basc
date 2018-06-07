@@ -47,6 +47,8 @@ Route::resource('vehiculos', 'VehiculoController');
 
 Route::resource('conductor', 'ConductorController');
 
+Route::resource('proveedor', 'ProveedorController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

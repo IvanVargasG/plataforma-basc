@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -6,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Ver Conductor</div>
+                <div class="card-header">Ver Proveedor</div>
 
                 <div class="card-body">
                   @if (session('message'))
@@ -18,7 +17,7 @@
                   <div class="flex-center position-ref full-height">
                       <div class="content">
                           <div class="title m-b-md">
-                              {{ $nombres }} {{ $apellidos }}
+                              {{ $nombre }}
                           </div>
                       </div>
                   </div>
