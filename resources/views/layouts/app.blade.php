@@ -53,6 +53,10 @@
                                   <a class="dropdown-item" href="{{ route('conductor.create') }}">
                                       Crear Conductor
                                   </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="{{ route('proveedor.create') }}">
+                                      Crear Proveedor
+                                  </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -67,6 +71,7 @@
                         @endguest
                     </ul>
                 </div>
+              </div>
             </div>
         </nav>
 

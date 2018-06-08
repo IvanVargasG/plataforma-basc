@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableProveedores extends Migration
+class CreateTableProveedor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class CreateTableProveedores extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('proveedor', function (Blueprint $table) {
+          $table->string('nombre')->unique();
+          $table->timestamps();
+      });
     }
 
     /**

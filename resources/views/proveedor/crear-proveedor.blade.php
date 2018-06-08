@@ -22,7 +22,7 @@
                             <label for="validationCustom01">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="validationCustom01" placeholder="Nombre" value="{{ old('nombre') }}" required>
                             <div class="valid-feedback">
-                              Looks good!
+                              Looks good!                              
                             </div>
                           </div>
                         </div>

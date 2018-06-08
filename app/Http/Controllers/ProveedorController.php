@@ -15,7 +15,7 @@ class ProveedorController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -41,8 +41,7 @@ class ProveedorController extends Controller
         $proveedor->nombre = $request->nombre;
 
         if ($proveedor->save()) {
-          return redirect(
-            route('proveedor.show', [$request->nombre])
+          return redirect(route('proveedor.show', [$request->nombre])
           )->with('message', 'Proveedor creado exitosamente');;
         } else {
           dd("No se pudo guardar el proveedor");
@@ -56,7 +55,7 @@ class ProveedorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  app\Models\ProveedoresModel\ $proveedor
+     * @param  \App\Models\ProveedoresModel $proveedor
      * @return \Illuminate\Http\Response
      */
     public function show(ProveedoresModel $proveedor)
@@ -66,7 +65,7 @@ class ProveedorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  app\Models\ProveedoresModel\ $proveedor
+     * @param \App\Models\ProveedoresModel $proveedor
      * @return \Illuminate\Http\Response
      */
     public function edit(ProveedoresModel $proveedor)
@@ -78,7 +77,7 @@ class ProveedorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  app\Models\ProveedoresModel\ $proveedor
+     * @param  \App\Models\ProveedoresModel $proveedor
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ProveedoresModel $proveedor)
