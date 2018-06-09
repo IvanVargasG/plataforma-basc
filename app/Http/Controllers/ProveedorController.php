@@ -36,12 +36,13 @@ class ProveedorController extends Controller
      */
     public function store(Request $request)
     {
-      if (!ProveedoresModel::find($request->nombre)) {
+      if (!ProveedoresModel::find($request->codigo)) {
         $proveedor = new ProveedoresModel;
+        $proveedor->codigo = $request->codigo;
         $proveedor->nombre = $request->nombre;
 
         if ($proveedor->save()) {
-          return redirect(route('proveedor.show', [$request->nombre])
+          return redirect(route('proveedor.show', [$request->codigo])
           )->with('message', 'Proveedor creado exitosamente');;
         } else {
           dd("No se pudo guardar el proveedor");

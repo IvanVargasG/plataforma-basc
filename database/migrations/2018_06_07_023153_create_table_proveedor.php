@@ -13,8 +13,9 @@ class CreateTableProveedor extends Migration
      */
     public function up()
     {
-      Schema::create('proveedor', function (Blueprint $table) {
-          $table->string('nombre')->unique();
+      Schema::create('proveedores', function (Blueprint $table) {
+          $table->string('codigo', 5)->unique();
+          $table->string('nombre');
           $table->timestamps();
       });
     }
