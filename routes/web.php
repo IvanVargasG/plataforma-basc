@@ -43,7 +43,7 @@ Route::get('/saludo/{name}/{apodo?}', function($name, $apodo =null){
     }
 });
 
-Route::resource('vehiculos', 'VehiculoController');
+Route::resource('vehiculo', 'VehiculoController');
 
 Route::resource('conductor', 'ConductorController');
 
