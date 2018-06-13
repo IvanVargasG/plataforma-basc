@@ -28,6 +28,6 @@ class CreateTableVehiculos extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('vehiculos');
     }
 }

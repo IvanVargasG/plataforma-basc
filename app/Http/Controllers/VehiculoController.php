@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\VehiculosModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class VehiculoController extends Controller
 {
@@ -36,22 +37,14 @@ class VehiculoController extends Controller
      */
     public function store(Request $request)
     {
-      if (!VehiculosModel::find($request->id)) {
+
+
         $vehiculo = new VehiculosModel;
         $vehiculo->placa = $request->placa;
         $vehiculo->kilometraje = $request->kilometraje;
 
-
         if ($vehiculo->save()) {
-          return redirect(
-            route('vehiculo.show', [$request->id])
-          )->with('message', 'Vehiculo creado exitosamente');;
-        } else {
-          dd("No se pudo guardar");
-        }
-
-      } else {
-        return back()->withInput($request->all())->with('message', 'Ya existe este vehiculo');
+          return ('vehiculo.show');        
       }
     }
 

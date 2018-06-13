@@ -12,7 +12,6 @@
                       <div class="alert alert-success">
                           {{ session('message') }}
                       </div>
-
                   @endif
                   <div class="flex-center position-ref full-height">
                       <div class="content">

@@ -27,7 +27,7 @@
                           </div>
                           <div class="col-md-4 mb-3">
                             <label for="validationCustom02">Kilometraje</label>
-                            <input type="text" class="form-control" name="Kilometraje" id="validationCustom02" placeholder="Kilometraje" value="{{ old('kilometraje') }}" required>
+                            <input type="text" class="form-control" name="kilometraje" id="validationCustom02" placeholder="Kilometraje" value="{{ old('kilometraje') }}" required>
                             <div class="valid-feedback">
                               Looks good!
                             </div>
