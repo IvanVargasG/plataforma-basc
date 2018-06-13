@@ -6,6 +6,7 @@ use App\Models\VehiculosModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\_token;
 
 class VehiculoController extends Controller
 {
@@ -37,14 +38,14 @@ class VehiculoController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $vehiculo = new VehiculosModel;
         $vehiculo->placa = $request->placa;
         $vehiculo->kilometraje = $request->kilometraje;
 
         if ($vehiculo->save()) {
-          return ('vehiculo.show');        
+        
+          return ('vehiculo.show');
+
       }
     }
 
