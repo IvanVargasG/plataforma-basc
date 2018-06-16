@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TonelajesModel;
 use Illuminate\Http\Request;
+use App\Models\ProveedoresModel as Proveedores;
 
 class TonelajeController extends Controller
 {
@@ -24,8 +25,11 @@ class TonelajeController extends Controller
      */
     public function create()
     {
-        $id_proveedores = TonelajesModel::all();
-        return view ('tonelaje.crear-tonelaje', compact('id_proveedores'));
+        $proveedores = Proveedores::all();
+
+        return view ('tonelaje.crear-tonejaje', [
+            'proveedores' => $proveedores
+        ]);
     }
 
     /**

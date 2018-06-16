@@ -29,8 +29,8 @@
                             <label for="validationCustom02">Proveedor</label>
                             <select name="id_proveedor" id="validationCustom02" placeholder="Proveedor" class="form-control">
                                 <option value="">-- Escoja el proveedor --</option>
-                                @foreach ($id_proveedores = proveedores)
-                                <option value="{{ proveedores ['codigo'] }}"> {{ proveedores['nombre'] }}</option>
+                                @foreach ($proveedores as $proveedor)
+                                <option value="{{ $proveedor->codigo }}"> {{ $proveedor->nombre }}</option>
                                 @endforeach
                             </select>
                               Looks good!
