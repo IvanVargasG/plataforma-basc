@@ -49,6 +49,8 @@ Route::resource('conductor', 'ConductorController');
 
 Route::resource('proveedor', 'ProveedorController');
 
+Route::resource('tonelaje', 'TonelajeController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

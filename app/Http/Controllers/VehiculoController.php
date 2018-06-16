@@ -38,15 +38,36 @@ class VehiculoController extends Controller
      */
     public function store(Request $request)
     {
-        $vehiculo = new VehiculosModel;
-        $vehiculo->placa = $request->placa;
-        $vehiculo->kilometraje = $request->kilometraje;
+        /*if (!VehiculosModel::find($request->placa)) {
+            $vehiculo = new VehiculosModel;
+            $vehiculo->placa = $request->placa;
+            $vehiculo->kilometraje = $request->kilometraje;
 
-        if ($vehiculo->save()) {
-        
-          return ('vehiculo.show');
+            if ($vehiculo->save()) {
+                return redirect(route('vehiculo.show', [$request->placa]));
+            }
 
-      }
+            return back()->withInput($request->all())->with('message', 'No se pudo guardar');
+        } else {
+            return back()->withInput($request->all())->with('message', 'Ya existe este vehículo');
+        }*/
+
+        $count = VehiculosModel::where('placa', $request->placa)
+            ->count("placa");
+
+        if ($count == 0) {
+            $vehiculo = new VehiculosModel;
+            $vehiculo->placa = $request->placa;
+            $vehiculo->kilometraje = $request->kilometraje;
+
+            if ($vehiculo->save()) {
+                return redirect(route('vehiculo.show', [$vehiculo->id]));
+            }
+
+            return back()->withInput($request->all())->with('message', 'No se pudo guardar');
+        } else {
+            return back()->withInput($request->all())->with('message', 'Ya existe este vehículo');
+        }
     }
 
     /**
