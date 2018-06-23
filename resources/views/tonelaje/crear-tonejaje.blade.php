@@ -37,7 +37,11 @@
                             </div>
                           </div>
                         </div>
+<<<<<<< HEAD
                         <button class="btn btn-primary" type="submit">Crear Tonelaje</button>
+=======
+                        <button class="btn btn-primary" type="submit">Crear Vehiculo</button>
+>>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
                       </form>
                     </div>
                   </div>

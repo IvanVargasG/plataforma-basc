@@ -61,10 +61,14 @@ class VehiculoController extends Controller
             $vehiculo->kilometraje = $request->kilometraje;
 
             if ($vehiculo->save()) {
+<<<<<<< HEAD
                 return redirect(route('vehiculo.show', [$vehiculo->id])
             )->with('message', 'Vehiculo creado exitosamente');;
 
             
+=======
+                return redirect(route('vehiculo.show', [$vehiculo->id]));
+>>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
             }
 
             return back()->withInput($request->all())->with('message', 'No se pudo guardar');
