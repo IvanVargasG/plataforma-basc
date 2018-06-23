@@ -62,6 +62,12 @@
                                 <a class="dropdown-item" href="{{ route('vehiculo.create') }}">
                                       Crear Vehiculo
                                   </a>
+                                  <a class="dropdown-item" href="{{ route('tonelaje.create') }}">
+                                        Crear Tonelaje
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('materiaprima.create') }}">
+                                        Crear Materia Prima
+                                    </a>
                                 </li>
 
                             <li class="nav-item dropdown">
