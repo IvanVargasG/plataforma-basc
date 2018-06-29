@@ -65,12 +65,11 @@
                                   <a class="dropdown-item" href="{{ route('tonelaje.create') }}">
                                         Crear Tonelaje
                                     </a>
-<<<<<<< HEAD
+
                                     <a class="dropdown-item" href="{{ route('materiaprima.create') }}">
                                         Crear Materia Prima
                                     </a>
-=======
->>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
+
                                 </li>
 
                             <li class="nav-item dropdown">

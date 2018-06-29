@@ -51,11 +51,8 @@ Route::resource('proveedor', 'ProveedorController');
 
 Route::resource('tonelaje', 'TonelajeController');
 
-<<<<<<< HEAD
 Route::resource('materiaprima', 'MateriaprimaController');
 
-=======
->>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

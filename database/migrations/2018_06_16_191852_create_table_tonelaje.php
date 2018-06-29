@@ -16,11 +16,8 @@ class CreateTableTonelaje extends Migration
         Schema::create('tonelaje', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tonelaje');
-<<<<<<< HEAD
             $table->integer('id_proveedor');
-=======
             $table->integer('id_provedor');
->>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
             $table->timestamps();
 
         });
@@ -33,10 +30,8 @@ class CreateTableTonelaje extends Migration
      */
     public function down()
     {
-<<<<<<< HEAD
+
         Schema::dropIfExists('tonelaje');
-=======
         //
->>>>>>> fadd4964ae31d235921c3578cc41362bc7e07c99
     }
 }
